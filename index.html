@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destiny Dreams Designs - Creative Geniuses</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Added Raleway font for cool effect -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -18,6 +18,7 @@
             background-color: #f4f4f4;
             color: #333;
             font-size: 16px;
+            line-height: 1.5;
         }
 
         /* Hero Section */
@@ -32,7 +33,6 @@
             padding: 0 20px;
         }
 
-        /* "Destiny Dreams Design" smaller and pop animation */
         .hero h1 {
             font-size: 2rem;
             font-family: 'Montserrat', sans-serif;
@@ -40,7 +40,6 @@
             animation: pop 3s ease-in-out infinite;
         }
 
-        /* "Turning wood into masterpieces" smaller and cool font */
         .hero p {
             font-size: 1.2rem;
             font-family: 'Raleway', sans-serif;
@@ -49,7 +48,6 @@
             margin-top: 10px;
         }
 
-        /* Animation for "Destiny Dreams Design" */
         @keyframes pop {
             0% {
                 transform: scale(1);
@@ -97,6 +95,7 @@
             display: flex;
             justify-content: space-around;
             gap: 20px;
+            flex-wrap: wrap;
         }
 
         .service-card {
@@ -106,6 +105,7 @@
             width: 30%;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            margin-bottom: 20px;
         }
 
         .service-card:hover {
@@ -254,6 +254,29 @@
                 font-size: 1.1rem;
                 padding: 12px 25px;
             }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            footer {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.2rem;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
@@ -319,8 +342,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; Destiny Dream Design Pty Ltd
-            | All rights reserved.</p>
+        <p>&copy; Destiny Dream Design Pty Ltd | All rights reserved.</p>
         <p>Follow us on: 
             <a href="#">Facebook</a> | 
             <a href="#">Instagram</a> | 
@@ -328,5 +350,21 @@
         </p>
     </footer>
 
+    <script>
+        // Function to generate random color
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Change background color every 10 seconds
+        setInterval(function() {
+            document.body.style.backgroundColor = getRandomColor();
+        }, 10000); // 10000ms = 10 seconds
+    </script>
 </body>
 </html>
